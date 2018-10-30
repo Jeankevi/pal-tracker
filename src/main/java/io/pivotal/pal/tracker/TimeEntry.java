@@ -16,11 +16,8 @@ public class TimeEntry {
     }
 
     public TimeEntry(long id,long projectId, long userId, LocalDate date, int hours){
+        this(projectId, userId, date, hours);
         this.id = id;
-        this.projectId = projectId;
-        this.userId = userId;
-        this.date = date;
-        this.hours = hours;
     }
 
     public TimeEntry(long projectId, long userId, LocalDate date, int hours){
@@ -53,6 +50,22 @@ public class TimeEntry {
 
     public int getHours() {
         return hours;
+    }
+
+    public void setProjectId(long projectId) {
+        this.projectId = projectId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
     }
 
     @Override
