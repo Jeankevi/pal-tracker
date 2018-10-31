@@ -30,6 +30,7 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository {
                             "VALUES (?, ?, ?, ?)",
                     RETURN_GENERATED_KEYS
             );
+            
             statement.setLong(1, timeEntry.getProjectId());
             statement.setLong(2, timeEntry.getUserId());
             statement.setDate(3, Date.valueOf(timeEntry.getDate()));
